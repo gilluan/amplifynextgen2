@@ -15,11 +15,13 @@ const schema = a.schema({
       priority: a.enum(["low", "medium", "high"]),
     })
     .authorization([a.allow.owner()]),
-  Profile: a.model({
-    name: a.string().required(),
-    email: a.email().required(),
-    phone: a.phone().required(),
-  }),
+  Profile: a
+    .model({
+      name: a.string().required(),
+      email: a.email().required(),
+      phone: a.phone().required(),
+    })
+    .authorization([a.allow.owner()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
