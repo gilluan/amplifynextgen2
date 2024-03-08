@@ -34,7 +34,7 @@ const schema = a.schema({
       text: a.string(),
     })
     .returns(a.ref("BiduResponse"))
-    .authorization([a.allow.owner()])
+    .authorization([a.allow.private()])
     .function("biduHandler"),
 });
 
