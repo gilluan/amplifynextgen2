@@ -6,7 +6,7 @@ import {
 } from "@aws-amplify/backend";
 
 const biduHandler = defineFunction({
-  entry: "./bidu/handler",
+  entry: "./bidu/handler.ts",
 });
 
 const schema = a.schema({
